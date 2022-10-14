@@ -4,8 +4,8 @@
   * main():
   * 
   * It marks the beginning of the program. It's where the functions defined before
-  * hand are called
-  */.
+  * hand are called.
+  */
 
 int main(void)
 {
