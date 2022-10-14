@@ -1,12 +1,13 @@
 #include <stdio.h>
 
 /**
-  * main():
-  *
-  * It marks the beginning of the program.
-  * It's where the functions defined beforehand
-  * are called.
-  */
+ * main - Entry point
+ *
+ * Description: It marks the beginning of the program.
+ *  It's where the functions defined beforehand
+ *  are called.
+ * Return: Always 0 in every program.
+ */
 
 int main(void)
 {
