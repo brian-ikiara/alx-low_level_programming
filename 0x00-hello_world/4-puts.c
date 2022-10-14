@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-/** 
+/**
   * main():
-  * 
+  *
   * It marks the beginning of the program.
   * It's where the functions defined beforehand
   * are called.
