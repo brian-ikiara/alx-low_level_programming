@@ -1,10 +1,9 @@
 #include <stdio.h>
 
-/**
-  * main():
-  * 
-  * It marks the beginning of the program. It's where the functions defined before
-  * hand are called.
+/** main():
+  * It marks the beginning of the program.
+  * It's where the functions defined beforehand
+  * are called.
   */
 
 int main(void)
