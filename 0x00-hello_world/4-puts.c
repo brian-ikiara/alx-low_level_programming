@@ -1,9 +1,11 @@
 #include <stdio.h>
 
-/*
- * the main function marks the beginning and end of the program.
- * It's where functions, that're defined beforehand, are called.
- */
+/**
+  * main():
+  * 
+  * It marks the beginning of the program. It's where the functions defined before
+  * hand are called
+  */.
 
 int main(void)
 {
