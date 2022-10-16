@@ -16,10 +16,6 @@ int main(void)
 		{
 			putchar(c);
 		}
-		else
-		{
-			putchar();
-		}
 	}
 	return (0);
 }
