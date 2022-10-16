@@ -10,6 +10,7 @@
 int main(void)
 {
 	int i;
+	int j;
 
 	j = i % 10;
 	for (i = 0; i <= 9; i++)
