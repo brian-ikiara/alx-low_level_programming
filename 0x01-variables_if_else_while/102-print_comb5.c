@@ -19,9 +19,9 @@ int main(void)
 			if (i < j)
 			{
 				putchar((i / 10) + '0');
-				putchar((j % 10) + '0');
-				putchar(' ');
 				putchar((i % 10) + '0');
+				putchar(' ');
+				putchar((j % 10) + '0');
 				putchar((j / 10) + '0');
 
 				if (i != 98 || (i == 98 && j != 99))
