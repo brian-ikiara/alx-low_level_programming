@@ -2,7 +2,7 @@
 
 /**
  * main - Beginning of program
- * Description: Prints combination of 2 
+ * Description: Prints combination of 2
  * digits from 0 to 9.
  *
  * Return: Always 0.
@@ -41,6 +41,6 @@ int main(void)
 		}
 	}
 	putchar('\n');
-	
+
 	return (0);
 }
