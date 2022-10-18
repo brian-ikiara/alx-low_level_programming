@@ -15,7 +15,4 @@ int _islower(int c)
 	if (c >= 'a' && c <= 'z')
 		/* Return value if condition's met */
 		return (1);
-	else
-		/* No need for braces as it will return end of program */
-		return (0);
 }
