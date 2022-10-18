@@ -13,8 +13,7 @@ void jack_bauer(void)
 {
 	int i = 0, j = 0;
 
-	while (i <= 24)
-	{
+	do {
 		do {
 			int x1 = (i / 10) + '0';
 			int x2 = (i % 10) + '0';
@@ -32,5 +31,5 @@ void jack_bauer(void)
 		} while (j <= 60);
 
 		i++;
-	}
+	} while (i <= 24);
 }
