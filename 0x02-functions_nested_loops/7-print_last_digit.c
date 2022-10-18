@@ -22,5 +22,5 @@ int print_last_digit(int n)
 	/* Repeats return value to please checker */
 	_putchar(ldig + '0');
 
-	return (n);
+	return (ldig);
 }
