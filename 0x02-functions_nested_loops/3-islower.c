@@ -17,7 +17,6 @@ int _islower(int c)
 		_putchar('1');
 	}
 	else
-	{
+		/* No need for braces as it will return end of program */
 		return (0);
-	}
 }
