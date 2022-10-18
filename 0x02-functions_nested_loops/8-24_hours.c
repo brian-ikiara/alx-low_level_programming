@@ -13,18 +13,23 @@ void jack_bauer(void)
 {
 	int i = 0, j = 0;
 	int x1 = (i / 10) + '0', x2 = (i % 10) + '0';
-	int y1 = (j / 10) + '0', y2 = (j % 10) + '0';
 
-	for (i; i <= 24; i++)
+	while (i <= 24)
 	{
-		for (j; j <= 60; j++)
+		while (j <= 60)
 		{
+			int x1 = (i / 10) + '0', x2 = (i % 10) + '0';
+			int y1 = (j / 10) + '0', y2 = (j % 10) + '0';
 			_putchar(x1);
 			_putchar(x2);
 			_putchar(':');
 			_putchar(y1);
 			_putchar(y2);
 			_putchar('\n');
+
+			j++;
 		}
+		
+		i++;
 	}
 }
