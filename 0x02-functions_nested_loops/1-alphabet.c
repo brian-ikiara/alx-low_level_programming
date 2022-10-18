@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
- * main - Program entry point
+ * print_alphabet - Contained in main.h
  *
  * Description: Prints the alphabet in lowercase
- * Return: 0.
+ * Return: 0, since it's what the void data
+ * type automatically returns.
  * On error, stderr.
  */
 
