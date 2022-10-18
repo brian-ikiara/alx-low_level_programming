@@ -11,7 +11,8 @@
 
 int _islower(int c)
 {
-	if ((c + '0') >= 'a' && (c + '0') <= 'z')
+	/* Checks if it exists in the lowercase alphabet set */
+	if (c >= 'a' && c <= 'z')
 	{
 		_putchar('1');
 	}
