@@ -16,13 +16,13 @@ void print_alphabet_x10(void)
 	int i = 0;
 
 	/* Prints the newlines */
-	do {
+	for (i; i <= 9; i++)
+	{
 		/* Prints the alphabet on the newline created */
-		do {
+		for (c; c <= 'z'; c++)
+		{
 			_putchar(c);
-			c++;
-		} while (c <= 'z');
+		}
 		_putchar('\n');
-		i++;
-	} while (i <= 9);
+	}
 }
