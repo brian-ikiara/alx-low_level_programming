@@ -13,9 +13,8 @@ int _islower(int c)
 {
 	/* Checks if it exists in the lowercase alphabet set */
 	if (c >= 'a' && c <= 'z')
-	{
-		_putchar('1');
-	}
+		/* Return value if condition's met */
+		return (1);
 	else
 		/* No need for braces as it will return end of program */
 		return (0);
