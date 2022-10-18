@@ -15,16 +15,11 @@ void jack_bauer(void)
 
 	do {
 		do {
-			int x1 = (i / 10) + '0';
-			int x2 = (i % 10) + '0';
-			int y1 = (j / 10) + '0';
-			int y2 = (j % 10) + '0';
-
-			_putchar(x1);
-			_putchar(x2);
+			_putchar((i / 10) + '0');
+			_putchar((i % 10) + '0');
 			_putchar(':');
-			_putchar(y1);
-			_putchar(y2);
+			_putchar((j / 10) + '0');
+			_putchar((j % 10) + '0');
 			_putchar('\n');
 
 			j++;
