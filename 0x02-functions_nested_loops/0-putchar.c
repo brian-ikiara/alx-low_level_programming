@@ -9,9 +9,11 @@
 
 int main(void)
 {
+	/* Declares string as array */
 	char s[8] = "_putchar";
 	int i = 0;
 
+	/* Returns char elements in the string array s */
 	do {
 		_putchar(s[i]);
 		i++;
