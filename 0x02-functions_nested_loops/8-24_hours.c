@@ -15,13 +15,12 @@ void jack_bauer(void)
 
 	while (i <= 24)
 	{
+		int x1 = (i / 10) + '0';
+		int x2 = (i % 10) + '0';
+		int y1 = (j / 10) + '0';
+		int y2 = (j % 10) + '0';
 		while (j <= 60)
 		{
-			int x1 = (i / 10) + '0';
-			int x2 = (i % 10) + '0';
-			int y1 = (j / 10) + '0';
-			int y2 = (j % 10) + '0';
-
 			_putchar(x1);
 			_putchar(x2);
 			_putchar(':');
