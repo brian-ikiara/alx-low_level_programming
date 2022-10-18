@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -10,7 +9,14 @@
 
 int main(void)
 {
-	_putchar('_');
-	printf("putchar\n");
+	char s[8] = "_putchar";
+	int i = 0;
+
+	do {
+		_putchar(s[i]);
+		i++;
+	} while (i < 8);
+	_putchar('\n');
+
 	return (0);
 }
