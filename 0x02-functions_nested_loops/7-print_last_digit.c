@@ -17,10 +17,10 @@ int print_last_digit(int n)
 	/* Converts n to absolute value if n is neg. */
 	if (n < 0)
 	{
-		ldig = ldig * -1; 
+		ldig = ldig * -1;
 	}
 	/* Repeats return value to please checker */
 	_putchar(ldig + '0');
 
-	return (n % 10);
+	return (n);
 }
