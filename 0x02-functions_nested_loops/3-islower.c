@@ -13,6 +13,10 @@ int _islower(int c)
 {
 	/* Checks if it exists in the lowercase alphabet set */
 	if (c >= 'a' && c <= 'z')
+	{
 		/* Return value if condition's met */
 		return (1);
+	}
+	else
+		return (0);
 }
