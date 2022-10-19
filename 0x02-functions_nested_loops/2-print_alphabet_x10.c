@@ -13,13 +13,12 @@
 void print_alphabet_x10(void)
 {
 	int i = 0;
+	char c = 'a';
 
 	/* Prints the newlines */
 	while (i <= 9)
 	{
 		/* Prints the alphabet on the newline created */
-		char c = 'a';
-
 		while (c <= 'z')
 		{
 			_putchar(c);
