@@ -13,7 +13,8 @@
 
 void print_to_98(int n)
 {
-	/** I had to use the pfintf function
+	/**
+	 * I had to use the pfintf function
 	 * as opposed to the _putchar, since it:
 	 * a) Makes work way easier
 	 * b) You don't have to type '0' after an integer
