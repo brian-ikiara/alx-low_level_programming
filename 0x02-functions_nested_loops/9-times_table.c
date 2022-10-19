@@ -10,14 +10,13 @@
 
 void times_table(void)
 {
-	int x, y, z;
+	int x, y = 0, z;
 
 	while (x <= 9)
 	{
 		x = 0;
 		while (y <= 9)
 		{
-			y = 0;
 			z = x * y;
 			if (y == 0)
 			{
