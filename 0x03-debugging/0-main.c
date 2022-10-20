@@ -12,8 +12,6 @@
 
 int main(void)
 {
-	int i = 69;
-
 	positive_or_negative(i);
 	return (0);
 }
