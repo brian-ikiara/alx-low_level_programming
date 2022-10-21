@@ -3,23 +3,16 @@
 /**
  * main - Entry point of program
  *
- * Description: Tests if function positive_or_negative
- * works for 0.
- * Return: 0, has no parameters.
+ * Description: Tests function that prints if
+ * integer is either positive or negative.
+ * Return: 0, as always.
  * On error, stderr.
  */
 
 int main(void)
 {
-	int i;
+	int i = 0;
 
-	/**
-	 * This has to be one of the simplest code
-	 * I've written in my ALX journey so far.
-	 * I hope I don't jinx myself. XD
-	 * :)
-	 */
-	i = 0;
 	positive_or_negative(i);
 
 	return (0);
