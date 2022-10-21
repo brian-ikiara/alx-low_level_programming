@@ -33,7 +33,7 @@ void print_diagonal(int n)
 		}
 		_putchar('\n');
 	}
-	else if (n == 0 || n < 0)
+	else
 	{
 		_putchar('\n');
 	}
