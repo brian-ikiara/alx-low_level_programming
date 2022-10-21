@@ -11,7 +11,7 @@
 
 int main(void)
 {
-	int i = 0;
+	int i;
 
 	/**
 	 * This has to be one of the simplest code
@@ -19,6 +19,7 @@ int main(void)
 	 * I hope I don't jinx myself. XD
 	 * :)
 	 */
+	i = 0;
 	positive_or_negative(i);
 
 	return (0);
