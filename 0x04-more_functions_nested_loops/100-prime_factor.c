@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 /**
+ * main - Program entry point
  *
  * Description: Prints the prime factors of any
  * number.
@@ -10,7 +11,9 @@
 
 int main(void)
 {
-	long n = 612852475143, d = 2, lp = 0;
+	long n = 612852475143;
+	long d = 2;
+	long lp = 0;
 
 	while (n != 1)
 	{
@@ -20,9 +23,9 @@ int main(void)
 			lp = d;
 		}
 
-		d++;
+		d += 1;
 	}
-	printf("%d\n", lp);
+	printf("%1d\n", lp);
 
 	return (0);
 }
