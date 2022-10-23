@@ -1,5 +1,6 @@
 #include <math.h>
 #include <stdio.h>
+#include "main.h"
 
 /**
  * main - Entry point of program
@@ -10,7 +11,7 @@
  * On error, stderr.
  */
 
-int main(void)
+void prime_numbers(void)
 {
 	int n = 612852475143;
 
@@ -31,6 +32,4 @@ int main(void)
 
 	if (n > 2)
 		printf("%d ", n);
-
-	return (0);
 }
