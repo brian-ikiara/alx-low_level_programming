@@ -11,9 +11,9 @@
  * On error, stderr.
  */
 
-int max_prime(int n)
+int max_prime(long n)
 {
-	int i, max = -1;
+	long i, max = -1;
 
 	while ((n % 2) == 0)
 	{
@@ -49,9 +49,9 @@ int max_prime(int n)
 
 int main(void)
 {
-	int i = 612852475143;
+	long i = 612852475143;
 
-	max_prime(i);
+	printf("%d\n", max_prime(i));
 
 	return (0);
 }
