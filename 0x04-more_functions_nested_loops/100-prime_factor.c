@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include <math.h>
 
 /**
- * main - Program entry point
+ * max_prime - Function prototype
+ * @n: Number to be checked
  *
  * Description: Prints the prime factors of any
  * number.
@@ -9,23 +11,47 @@
  * On error, stderr.
  */
 
+int max_prime(int n)
+{
+	int i, max = -1;
+
+	while ((n % 2) == 0)
+	{
+		max = 2;
+		n /= 2;
+	}
+
+	for (i = 3; i <= sqrt(n); i += 2)
+	{
+		while ((n % i) == 0)
+		{
+			max = i;
+			n /= i;
+		}
+	}
+
+	if (n > 2)
+	{
+		max = n;
+	}
+
+	return (max);
+}
+
+/**
+ * main - Program entry point
+ *
+ * Description: To determine largest prime factor
+ * of 612852475143.
+ * Return: 0, as always.
+ * On error, stderr.
+ */
+
 int main(void)
 {
-	long n = 612852475143;
-	long d = 2;
-	long lp = 0;
+	int i = 612852475143;
 
-	while (n != 1)
-	{
-		if ((n % d) == 0)
-		{
-			n = n / d;
-			lp = d;
-		}
-
-		d += 1;
-	}
-	printf("%1d\n", lp);
+	max_prime(i);
 
 	return (0);
 }
