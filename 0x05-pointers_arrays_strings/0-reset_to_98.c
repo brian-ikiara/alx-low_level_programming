@@ -2,7 +2,7 @@
 
 /**
  * reset_to_98 - Function prototype
- * @*n: Pointer to address of variable
+ * @n: Pointer to address of variable
  *
  * Description: Updates the value of the variable it
  * points to, to 98.
