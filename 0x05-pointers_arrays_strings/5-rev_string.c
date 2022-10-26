@@ -1,6 +1,28 @@
 #include "main.h"
 
 /**
+ * _strlen - Function prototype
+ * @s: String to be checked
+ *
+ * Description: Returns string length.
+ * Return: i, counter.
+ * On error, stderr.
+ */
+
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (*s != '\0')
+	{
+		i++;
+		s++;
+	}
+
+	return (i);
+}
+
+/**
  * rev_string - Function prototype
  * @str: String to be reversed
  *
