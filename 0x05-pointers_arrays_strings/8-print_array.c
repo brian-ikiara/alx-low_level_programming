@@ -19,9 +19,10 @@ void print_array(int *a, int n)
 	{
 		for (i = 0; i < n; i++)
 		{
+			printf("%d", *(a + i));
+
 			if (i != n)
 			{
-				printf("%d", *(a + i));
 				printf(", ");
 			}
 		}
