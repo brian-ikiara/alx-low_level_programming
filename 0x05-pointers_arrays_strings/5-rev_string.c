@@ -2,32 +2,33 @@
 
 /**
  * rev_string - Function prototype
- * @s: String to be reversed
+ * @str: String to be reversed
  *
  * Description: Reverses a string.
  * Return: void.
  * On error, stderr
  */
 
-void rev_string(char *s)
+void rev_string(char *str)
 {
-	int i = 0, j, k;
-	char t;
+	int l, i;
+	char *begin, *end, ch;
 
-	while (i >= 0)
-	{
-		if (s[i] == '\0')
-			break;
-		i++;
-	}
+	l = _strlen(str);
 
-	for (j = 0; j < (i - 1); j++)
+	begin = str;
+	end = str;
+
+	for (i = 0; i < (l - 1); i++)
+		end++;
+
+	for (i = 0; i < (l / 2); i++)
 	{
-		for (k = j + 1; j > 0; j--)
-		{
-			t = *(s + k);
-			*(s + k) = *(s + (k - 1));
-			*(s + (k - 1)) = t;
-		}
+		ch = *end;
+		*end = *begin;
+		*begin = ch;
+
+		begin++;
+		end--;
 	}
 }
