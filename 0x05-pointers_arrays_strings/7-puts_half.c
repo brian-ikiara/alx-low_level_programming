@@ -34,7 +34,8 @@ int _strlen(char *s)
 
 void puts_half(char *str)
 {
-	int l, i = 0;
+	int i = 0;
+	float l;
 
 	l = _strlen(str) / 2;
 
