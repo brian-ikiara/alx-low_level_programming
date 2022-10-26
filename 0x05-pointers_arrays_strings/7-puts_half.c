@@ -36,11 +36,11 @@ void puts_half(char *str)
 {
 	int l, i = 0;
 
-	l = _strlen(str);
+	l = _strlen(str) / 2;
 
 	while (str[i] != '\0')
 	{
-		while (i >= (l / 2))
+		while (i >= l)
 		{
 			_putchar(str[i]);
 			i++;
