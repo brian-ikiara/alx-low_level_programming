@@ -1,26 +1,6 @@
 #include "main.h"
 
 /**
- * _strlen - Function prototype
- * @s: String to be checked
- *
- * Description: Returns length of a given string.
- * Return: i, the counter.
- * On error, stderr.
- */
-
-int _strlen(char *s)
-{
-	if (*s != '\0')
-	{
-		i++;
-		s++;
-	}
-
-	return (i);
-}
-
-/**
  * _strcmp - Function prototype
  * @s1: String comparor
  * @s2: String comparee
@@ -33,17 +13,21 @@ int _strlen(char *s)
 
 int _strcmp(char *s1, char *s2)
 {
-	int l1 = _strlen(s1), l2 = _strlen(s2);
+	int i;
 
-	for (int i = 0; ; i++)
-		if (s1[i] == '\0' && s2[i] == '\0')
-			return (0);
+	for (i = 0; s1[i] && s2[i]; ++i)
+	{
+		if (s1[i] == s2[i] || (s1[i] ^ 32 == s2[i]))
+			continue;
+		else
+			break;
+	}
 
-		int a1 = (int) s1[i];
-		int a2 = (int) s2[i];
+	if (s1[i] == s2[i])
+		return (0);
 
-		if (a1 > a2)
-			return (l1);
-		if (a2 > a1)
-			return (l1 * -1);
+	if ((s1[i] | 32) < (s2[i] | 32))
+		return (-1);
+
+	return (-1);
 }
