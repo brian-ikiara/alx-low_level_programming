@@ -35,14 +35,15 @@ int _strcmp(char *s1, char *s2)
 {
 	int l1 = _strlen(s1), l2 = _strlen(s2);
 
-	if (l1 > l2)
-	{
-		return (l1);
-	}
-	else if (l2 > l1)
-	{
-		return (l2);
-	}
-	else
-		return (0);
+	for (int i = 0; ; i++)
+		if (s1[i] == '\0' && s2[i] == '\0')
+			return (0);
+
+		int a1 = (int) s1[i];
+		int a2 = (int) s2[i];
+
+		if (a1 > a2)
+			return (l1);
+		if (a2 > a1)
+			return (l1 * -1);
 }
