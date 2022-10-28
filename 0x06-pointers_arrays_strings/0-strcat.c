@@ -35,7 +35,7 @@ int _strlen(char *s)
 
 char *_strcat(char *dest, char *src)
 {
-	int i, l;
+	int i, len;
 
 	len = _strlen(dest);
 	while (src[i] != '\0')
