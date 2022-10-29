@@ -1,6 +1,28 @@
 #include "main.h"
 
 /**
+ * _strlen - Function prototype
+ * @str: String to be checked
+ *
+ * Description: Returns the length of a string.
+ * Return: i, the counter.
+ * On error, stderr.
+ */
+
+int _strlen(char *str)
+{
+	int i = 0;
+
+	while (*s != '\0')
+	{
+		i++;
+		str++;
+	}
+
+	return (i);
+}
+
+/**
  * cap_string - Function prototype
  * @s: String to be CAPITALIZED
  *
@@ -11,35 +33,20 @@
 
 char *cap_string(char *s)
 {
-	int i;
+	int i, l = _strlen(s);
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; i < l; i++)
 	{
-		if (i == 0)
+		if ((i == 0 && s[i] != ' ') || (s[i] != ' ' && s[i - 1] == ' '))
 		{
 			if (s[i] >= 'a' && s[i] <= 'z')
 			{
-				s[i] = s[i] - 32;
-			}
-			continue;
-		}
-
-		if (s[i] == ' ')
-		{
-			++i;
-
-			if (s[i] >= 'a' && s[i] <= 'z')
-			{
-				s[i] = s[i] - 32;
-				continue;
+				s[i] = (char) (('A' - 'a') + s[i]);
 			}
 		}
-		else
+		else if (s[i] >= 'A' && s[i] <= 'Z')
 		{
-			if (s[i] >= 'A' && s[i] <= 'Z')
-			{
-				s[i] = s[i] + 32;
-			}
+			s[i] = (char) (s[i] + ('a' - 'A'));
 		}
 	}
 
