@@ -29,12 +29,13 @@ void swap_int(int *a, int *b)
 
 void reverse_array(int *a, int n)
 {
-	int *p = a + (n - 1);
+	int *p1 = a;
+	int *p2 = a + (n - 1);
 
-	while (a < p)
+	while (p1 < p2)
 	{
-		swap(a, p);
-		a++;
-		p--;
+		swap(p1, p2);
+		p1++;
+		p2--;
 	}
 
