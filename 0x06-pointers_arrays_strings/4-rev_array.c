@@ -2,19 +2,21 @@
 
 /**
  * swap_int - Function prototype
- * @a: Swapee
- * @b: Swaper
+ * @x: Swapee
+ * @y: Swaper
  *
  * Description: Swaps two integers a and b.
  * Return: Nothing, since it's void.
  * On error, stderr.
  */
 
-void swap_int(int *a, int *b)
+void swap_int(int *x, int *y)
 {
-	int t = *a;
-	*a = *b;
-	*b = t;
+	int t;
+
+	t = *x;
+	*x = *y;
+	*y = t;
 }
 
 /**
@@ -29,8 +31,8 @@ void swap_int(int *a, int *b)
 
 void reverse_array(int *a, int n)
 {
-	int *p1 = a;
-	int *p2 = a + (n - 1);
+	int *p1 = *(a + 0);
+	int *p2 = *(a + (n - 1));
 
 	while (p1 < p2)
 	{
