@@ -31,8 +31,8 @@ void swap_int(int *x, int *y)
 
 void reverse_array(int *a, int n)
 {
-	int *p1 = *(a + 0);
-	int *p2 = *(a + (n - 1));
+	int *p1 = a[0];
+	int *p2 = a[n - 1];
 
 	while (p1 < p2)
 	{
