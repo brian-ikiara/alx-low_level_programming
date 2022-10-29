@@ -36,7 +36,7 @@ void reverse_array(int *a, int n)
 
 	while (p1 < p2)
 	{
-		swap(p1, p2);
+		swap_int(p1, p2);
 		p1++;
 		p2--;
 	}
