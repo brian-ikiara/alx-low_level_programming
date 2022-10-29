@@ -3,11 +3,12 @@
 
 #include <stdio.h>
 
-int _strlen(char *s);
-int _putchar(char c);
-char *_strcat(char *dest, char *src);
-char *_strncat(char *dest, char *src, int n);
-char *_strncpy(char *dest, char *src, int n);
-int _strcmp(char *s1, char *s2);
+int _strlen(char *);
+int _putchar(char);
+char *_strcat(char *, char *);
+char *_strncat(char *, char *, int);
+char *_strncpy(char *, char *, int);
+int _strcmp(char *, char *);
+void reverse_array(int *, int);
 
 #endif
