@@ -40,4 +40,4 @@ void reverse_array(int *a, int n)
 		p1++;
 		p2--;
 	}
-
+}
