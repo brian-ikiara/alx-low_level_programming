@@ -33,22 +33,5 @@ int _strlen(char *str)
 
 char *cap_string(char *s)
 {
-	int i, l = _strlen(s);
 
-	for (i = 0; i < l; i++)
-	{
-		if ((i == 0 && s[i] != ' ') || (s[i] != ' ' && s[i - 1] == ' '))
-		{
-			if (s[i] >= 'a' && s[i] <= 'z')
-			{
-				s[i] = (char) (('A' - 'a') + s[i]);
-			}
-		}
-		else if (s[i] >= 'A' && s[i] <= 'Z')
-		{
-			s[i] = (char) (s[i] + ('a' - 'A'));
-		}
-	}
-
-	return (s);
 }
