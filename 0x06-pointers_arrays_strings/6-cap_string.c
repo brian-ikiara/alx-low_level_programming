@@ -15,9 +15,31 @@ char *cap_string(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] >= 'a' && s[i] == 'z')
+		if (i == 0)
 		{
-			s[i] = s[i] - 32;
+			if (s[i] >= 'a' && s[i] <= 'z')
+			{
+				s[i] = s[i] - 32;
+			}
+			continue;
+		}
+
+		if (s[i] == ' ')
+		{
+			++i;
+
+			if (s[i] >= 'a' && s[i] <= 'z')
+			{
+				s[i] = s[i] - 32;
+				continue;
+			}
+		}
+		else
+		{
+			if (s[i] >= 'A' && s[i] <= 'Z')
+			{
+				s[i] = s[i] + 32;
+			}
 		}
 	}
 
