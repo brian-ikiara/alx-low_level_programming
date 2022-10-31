@@ -51,7 +51,7 @@ char *string_toupper(char *sr)
  * @s: String to be CAPITALIZED
  *
  * Description: Capitalizes all words of a given string s.
- * Return: s, STRING.
+ * Return: s, String String String.
  * On error, stderr.
  */
 
@@ -59,9 +59,9 @@ char *cap_string(char *s)
 {
 	int i, l = _strlen(s);
 
-	for (i = 0; i < l; i++)
+	for (i = 0; i <= l; i++)
 	{
-		if (i == 0 || i == (l - 1))
+		if (i == 0)
 		{
 			s[i] = string_toupper(s[i]);
 		}
