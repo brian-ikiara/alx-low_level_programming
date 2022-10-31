@@ -13,13 +13,37 @@ int _strlen(char *str)
 {
 	int i = 0;
 
-	while (*s != '\0')
+	while (*str != '\0')
 	{
 		i++;
 		str++;
 	}
 
 	return (i);
+}
+
+/**
+ * string_toupper - Function prototype
+ * @sr: String to be CAPITALIZED
+ *
+ * Description: Capitalizes a given string.
+ * Return: sr, STRING.
+ * On error, stderr.
+ */
+
+char *string_toupper(char *sr)
+{
+	int i;
+
+	for (i = 0; sr[i] != '\0'; i++)
+	{
+		if (sr[i] >= 'a' && sr[i] <= 'z')
+		{
+			sr[i] = sr[i] - 32;
+		}
+	}
+
+	return (sr);
 }
 
 /**
@@ -33,5 +57,20 @@ int _strlen(char *str)
 
 char *cap_string(char *s)
 {
+	int i, l = _strlen(s);
 
+	for (i = 0; i < l; i++)
+	{
+		if (i == 0 || i == (l - 1))
+		{
+			s[i] = string_toupper(s[i]);
+		}
+		else if (s[i] == ' ')
+		{
+			s[i - 1] = string_toupper(s[i - 1]);
+			s[i + 1] = string_toupper(s[i + 1]);
+		}
+	}
+
+	return (s);
 }
