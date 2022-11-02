@@ -11,10 +11,11 @@
 
 char *rot13(char *s)
 {
-	int i = 0, j;
+	int i, j;
 	char alpha[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
+	i = 0;
 	while (s[i] != '\0')
 	{
 		j = 0;
