@@ -2,7 +2,7 @@
 
 /**
  * _memset - Function prototype
- * @s: Memory address
+ * @s: Memory area
  * @b: Constant byte
  * @n: Number of bytes pointed at
  *
@@ -14,11 +14,14 @@
 
 char *_memset(char *s, char b, unsigned int n)
 {
-	register unsigned *p = *s;
+	char *p = s;
+	unsigned int i;
+	unsigned int val = b;
 
-	while (n-- > 0)
+	for (i = 0; i < n; i++)
 	{
-		*p++ = b;
+		p[i] = val;
 	}
-	return (s);
+
+	return (p);
 }
