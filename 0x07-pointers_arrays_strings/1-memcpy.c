@@ -8,7 +8,7 @@
  *
  * Description: Copies n bytes from memory area src to memory
  * area dest.
- * Return: **dest, pointer to dest.
+ * Return: dest, pointer to dest.
  * On error, stderr.
  */
 

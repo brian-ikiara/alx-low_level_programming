@@ -8,7 +8,7 @@
  *
  * Description: Fills the first n bytes of the memory address
  * pointed to by s with the constant byte b.
- * Return: *s, pointer to memory address.
+ * Return: p, pointer to memory area s.
  * On error, stderr.
  */
 

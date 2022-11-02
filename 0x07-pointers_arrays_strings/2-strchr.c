@@ -7,7 +7,7 @@
  *
  * Description: Returns a pointer to the first occurence of the
  * character c in the string s, or NULL if character is not found.
- * Return: *cp, pointer to c; NULL otherwise.
+ * Return: (s + i), pointer to c; NULL otherwise.
  * On error, stderr.
  */
 
