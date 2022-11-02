@@ -7,7 +7,7 @@
  *
  * Description: Finds the first occurence of substring needle
  * in the string haystack.
- * Return; (n + i), pointer to first occurence.
+ * Return; haystack, pointer to first occurence.
  * On error, stderr.
  */
 
