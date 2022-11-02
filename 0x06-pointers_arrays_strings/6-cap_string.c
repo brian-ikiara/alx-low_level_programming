@@ -1,76 +1,40 @@
 #include "main.h"
 
 /**
- * _strlen - Function prototype
- * @str: String to be checked
- *
- * Description: Returns the length of a string.
- * Return: i, the counter.
- * On error, stderr.
- */
-
-int _strlen(char *str)
-{
-	int i = 0;
-
-	while (*str != '\0')
-	{
-		i++;
-		str++;
-	}
-
-	return (i);
-}
-
-/**
- * string_toupper - Function prototype
- * @sr: String to be CAPITALIZED
- *
- * Description: Capitalizes a given string.
- * Return: sr, STRING.
- * On error, stderr.
- */
-
-char *string_toupper(char *sr)
-{
-	int i;
-
-	for (i = 0; sr[i] != '\0'; i++)
-	{
-		if (sr[i] >= 'a' && sr[i] <= 'z')
-		{
-			sr[i] = sr[i] - 32;
-		}
-	}
-
-	return (sr);
-}
-
-/**
  * cap_string - Function prototype
- * @s: String to be CAPITALIZED
+ * @str: Sting to be CAPITALIZED
  *
- * Description: Capitalizes all words of a given string s.
- * Return: s, String String String.
+ * Description: Capitalizes the first letter of each word
+ * contained in string str.
+ * Return: str, String String String.
  * On error, stderr.
  */
 
-char *cap_string(char *s)
+char *cap_string(char *str)
 {
-	int i, l = _strlen(s);
+	int i = 0, j;
+	char c[] = {9, 10, 32, 33, 34, 40, 41, 44, 46, 59, 63, 123, 125};
 
-	for (i = 0; i <= l; i++)
+	while (str[i] != '\0')
 	{
-		if (i == 0)
+		if (i == 0 && str[i] >= 'a' && str[i] <= 'z')
 		{
-			s[i] = string_toupper(s[i]);
+			str[i] = str[i] - 32;
 		}
-		else if (s[i] == ' ')
+
+		j = 0;
+		while (c[j] != '\0')
 		{
-			s[i - 1] = string_toupper(s[i - 1]);
-			s[i + 1] = string_toupper(s[i + 1]);
+			if (c[j] == str[i] && (str[i + 1] >= 'a' && str[i + 1] <= 'z'))
+			{
+				str[i + 1] = str[i + 1] - 32;
+			}
+
+			j++;
 		}
+
+		i++;
 	}
 
-	return (s);
+	return (str);
 }
