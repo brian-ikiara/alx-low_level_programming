@@ -1,1 +1,1 @@
-__First bout of C-olic__
+__First bout of C-olics__
