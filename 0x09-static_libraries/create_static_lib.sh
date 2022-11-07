@@ -1,2 +1,2 @@
-#!/bin/bash -e
-gcc *.c -L. -lall
+#!/bin/bash
+ar -rcST liball.a *.c
