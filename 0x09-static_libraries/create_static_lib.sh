@@ -1,2 +1,2 @@
-#!/bin/bash
-ar -rc. liball.a *.c
+#!/bin/bash -e
+ar -rc liball.a *.c
