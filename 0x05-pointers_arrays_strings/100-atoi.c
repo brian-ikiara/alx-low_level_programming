@@ -27,7 +27,7 @@ int _atoi(char *s)
 				k *= 10;
 			j++;
 		}
-		
+
 		i++;
 	}
 
