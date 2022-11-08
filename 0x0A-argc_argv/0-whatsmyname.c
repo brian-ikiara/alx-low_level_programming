@@ -10,13 +10,7 @@
  * On error, stderr.
  */
 
-void main(int argc, char *argv[])
+void main(int __attribute__((__unused__)) argc, char *argv[])
 {
-	int i;
-
-	for (i = 0; i < argc; i++)
-	{
-		printf("%s", argv[i]);
-	}
-	printf("\n");
+	printf("%s\n", argv[0]);
 }
