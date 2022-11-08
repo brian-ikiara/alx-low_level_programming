@@ -13,7 +13,10 @@
 
 int main(int argc, char *argv[])
 {
-	int i = atoi(argv[1]), j = atoi(argv[2]), r;
+	int i, j, r;
+
+	i = atoi(argv[1]);
+	j = atoi(argv[2]);
 
 	if (argc != 3)
 	{
