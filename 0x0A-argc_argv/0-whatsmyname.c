@@ -6,7 +6,7 @@
  * @argv: Array of command-line arguments
  *
  * Description: Prints the name of the program.
- * Return: 0, success.
+ * Return: Nothing, since it's void..
  * On error, stderr.
  */
 
@@ -19,6 +19,5 @@ void main(int argc, char *argv[])
 		printf("%s", argv[i]);
 		i++;
 	}
-
-	return (0);
+	printf("\n");
 }
