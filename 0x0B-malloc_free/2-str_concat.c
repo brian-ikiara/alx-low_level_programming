@@ -25,6 +25,8 @@ char *str_concat(char *s1, char *s2)
 	if (cs == NULL)
 		return (NULL);
 
+	i = 0;
+	j = 0;
 	if (s1)
 	{
 		while (i < il)
