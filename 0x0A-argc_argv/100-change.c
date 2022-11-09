@@ -14,7 +14,7 @@
 
 int main(int argc, char *argv[])
 {
-	int denom[] = {1, 2, 5, 10, 25}, money, cents = 0, bal, i;
+	int denom[] = {25, 10, 5, 2, 1}, money, cents = 0, bal, i;
 
 	if (argc != 2)
 	{
