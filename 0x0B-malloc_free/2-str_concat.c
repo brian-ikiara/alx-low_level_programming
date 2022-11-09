@@ -27,8 +27,11 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1)
 	{
-		for (i; i < il; i++)
+		while (i < il)
+		{
 			cs[i] = s1[i];
+			i++;
+		}
 	}
 
 	if (s2)
