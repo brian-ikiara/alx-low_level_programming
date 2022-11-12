@@ -8,17 +8,17 @@
  *
  * Description: Checks if a given amount of mem has been
  * allocated.
- * Return: ptr, pointer to mem allocation.
+ * Return: p, pointer to mem allocation.
  * On error, 98.
  */
 
 void *malloc_checked(unsigned int b)
 {
-	void *ptr;
+	void *p;
 
-	ptr = malloc(sizeof(unsigned int) * b);
-	if (ptr == NULL)
+	p = malloc(b);
+	if (p == NULL)
 		exit(98);
 
-	return (ptr);
+	return (p);
 }
