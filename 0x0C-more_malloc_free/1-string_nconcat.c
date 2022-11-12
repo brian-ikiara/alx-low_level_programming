@@ -1,28 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
-
-/**
- * strlen - Function prototype
- * @s: String to be checked
- *
- * Description: Returns the length of a given string.
- * Return: i, the counter.
- * On error, stderr.
- */
-
-int _strlen(char *s)
-{
-	int i = 0;
-
-	while (*s != '\0')
-	{
-		i++;
-		s++;
-	}
-
-	return (0);
-}
+#include <string.h>
 
 /**
  * string_nconcat - Function prototype
@@ -40,7 +19,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *cs, nul = '\0';
 	int t;
-	unsigned int i = 0, j = 0, s1l = _strlen(s1), s2l = _strlen(s2);
+	unsigned int i = 0, j = 0, s1l = strlen(s1), s2l = strlen(s2);
 
 	if (s1 == NULL)
 		s1 = &nul;
@@ -63,7 +42,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (s2[i] != '\0' && n-- != 0)
 		cs[j++] = s2[i++];
 
-	cs[j] = nul;
+	cs[j] = '\0';
 
 	return (cs);
 }
