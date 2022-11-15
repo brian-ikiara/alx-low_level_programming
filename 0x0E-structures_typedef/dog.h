@@ -10,6 +10,7 @@
  * Description: Creates a dog's profile.
  */
 
+typedef struct dog dog_t;
 struct dog
 {
 	char *name;
@@ -18,5 +19,6 @@ struct dog
 };
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
 
 #endif
