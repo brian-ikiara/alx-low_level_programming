@@ -1,21 +1,5 @@
-#include "main.h"
+#include "dog.h"
 #include <stdlib.h>
-
-/**
- * struct dog -  Data structure
- * @name: Dog's name
- * @age: Dog's age
- * @owner: Dog's owner
- *
- * Description: Creates dog's profile.
- */
-
-struct dog
-{
-	char *name;
-	float age;
-	char *owner;
-};
 
 /**
  * init_dog - Function prototype
