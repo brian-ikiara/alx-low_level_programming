@@ -1,3 +1,4 @@
+#include "dog.h"
 #include "main.h"
 
 /**
