@@ -1,4 +1,4 @@
-#include "function_pointers.h"
+#include <stdio.h>
 
 /**
  * _ps - Function prototype
@@ -15,10 +15,10 @@ void _ps(char *s)
 
 	while (s[i] != '\0')
 	{
-		_putchar(s[i]);
+		putchar(s[i]);
 		i++;
 	}
-	_putchar('\n');
+	putchar('\n');
 }
 
 /**
