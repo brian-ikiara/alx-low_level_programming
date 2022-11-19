@@ -1,4 +1,5 @@
-#include "calc.h"
+#include "3-calc.h"
+#include <stddef.h>
 
 /**
  * get_op_func - Function pointer
@@ -12,7 +13,7 @@
  * On error, stderr.
  */
 
-int ((*get_op_func)(char *s))(int a, int b)
+int ((*get_op_func(char *s))(int a, int b))
 {
 	int i = 0;
 	op_t ops[] = {
@@ -24,12 +25,8 @@ int ((*get_op_func)(char *s))(int a, int b)
 		{NULL,NULL}
 	};
 
-	while (i < 5)
-	{
-		if (*s == ops[i][0])
-			return (ops[i][1].f);
+	while (ops[i].op != NULL && *(ops[i].op) != *s)
 		i++;
-	}
 
-	return (NULL);
+	return (ops[i].f);
 }
