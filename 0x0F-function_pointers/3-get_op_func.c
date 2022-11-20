@@ -4,8 +4,6 @@
 /**
  * get_op_func - Function pointer
  * @s: The operator
- * @a: Num1
- * @b: Num2
  *
  * Description: Selects the functions from an array
  * based on the operator given.
@@ -13,7 +11,7 @@
  * On error, stderr.
  */
 
-int ((*get_op_func(char *s))(int a, int b))
+int (*get_op_func(char *s))(int, int)
 {
 	int i = 0;
 	op_t ops[] = {
@@ -22,7 +20,7 @@ int ((*get_op_func(char *s))(int a, int b))
 		{"*", op_mul},
 		{"/", op_div},
 		{"%", op_mod},
-		{NULL,NULL}
+		{NULL, NULL}
 	};
 
 	while (ops[i].op != NULL && *(ops[i].op) != *s)

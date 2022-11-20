@@ -9,7 +9,6 @@
  * Return: a + b, sum.
  * On error, stderr.
  */
-
 int op_add(int a, int b)
 {
 	return (a + b);
@@ -24,7 +23,6 @@ int op_add(int a, int b)
   * Return: a - b, difference.
   * On error, stderr.
   */
-
 int op_sub(int a, int b)
 {
 	return (a - b);
@@ -39,7 +37,6 @@ int op_sub(int a, int b)
   * Return: a * b, product.
   * On error, stderr.
   */
-
 int op_mul(int a, int b)
 {
 	return (a * b);
@@ -54,10 +51,9 @@ int op_mul(int a, int b)
  * Return: a / b, quotient.
  * On error, stderr.
  */
-
 int op_div(int a, int b)
 {
-         return (a / b);
+	return (a / b);
 }
 
 /**
@@ -69,7 +65,6 @@ int op_div(int a, int b)
  * Return: a % b, modulus.
  * On error, stderr.
  */
-
 int op_mod(int a, int b)
 {
 	return (a % b);
