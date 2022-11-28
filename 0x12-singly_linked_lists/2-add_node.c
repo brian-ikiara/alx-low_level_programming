@@ -15,7 +15,7 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	char *duplicate = strdup(str);
-	int length = 0;
+	int length = strlen(str);
 	list_t *address = malloc(sizeof(list_t));
 
 	/* Edge case I */
@@ -28,13 +28,9 @@ list_t *add_node(list_t **head, const char *str)
 		return (NULL);
 	}
 
-	/* Iterates through str and the result is the length */
-	while (str[length])
-		length++;
-
 	/* Where the magic happens */
 	address->str = duplicate;
-	address->length = length;
+	address->len = length;
 	address->next = *head;
 	*head = address;
 
