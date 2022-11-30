@@ -7,7 +7,7 @@
  * @h: Pointer to head
  *
  * Description: Prints all elements of a list_t list.
- * Return: n, number of nodes.
+ * Return: nodes, number of nodes.
  * On error, stderr.
  */
 
