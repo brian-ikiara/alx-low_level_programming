@@ -18,11 +18,9 @@ void free_listint(listint_t *head)
 	{
 		/* Temporarily assign next to temp */
 		temp = head->next;
-		/* Call free() for head->next */
-		free(head->next);
-		/* Call free() for head */
-		free(head);
 		/* Swap the two */
 		head = temp;
+		/* Call free() for head->next */
+		free(head);
 	}
 }
