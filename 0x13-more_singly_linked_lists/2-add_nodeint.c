@@ -11,7 +11,7 @@
  * On error, NULL.
  */
 
-listint_t *add_nodeint(listint **head, const int n)
+listint_t *add_nodeint(listint_t **head, const int n)
 {
 	const int num = n;
 	listint_t *a = malloc(sizeof(listint_t));
