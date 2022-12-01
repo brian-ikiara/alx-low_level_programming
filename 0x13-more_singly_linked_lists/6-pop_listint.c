@@ -22,9 +22,9 @@ int pop_listint(listint_t **head)
 	/* head_ptr stores address of head */
 	head_ptr = *head;
 	/* head's data is stored in ndata */
-	ndata = (*head)->n;
+	ndata = (**head).n;
 	/* head now points to the second node */
-	*head = (*head)->next;
+	*head = (**head).next;
 	/* Original head is set to NULL by free() */
 	free(head_ptr);
 	/* head_ptr is refreshed */
