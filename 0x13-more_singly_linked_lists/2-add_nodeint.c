@@ -13,6 +13,7 @@
 
 listint_t *add_nodeint(listint **head, const int n)
 {
+	const int num = n;
 	listint_t *a = malloc(sizeof(listint_t));
 
 	/* Edge case */
@@ -20,7 +21,7 @@ listint_t *add_nodeint(listint **head, const int n)
 		return (NULL);
 
 	/* Initialize data of node with n */
-	a->n = n;
+	a->n = num;
 	/* Assign value of next to head */
 	a->next = *head;
 	/* Finally swap value of head to be the address of a */
