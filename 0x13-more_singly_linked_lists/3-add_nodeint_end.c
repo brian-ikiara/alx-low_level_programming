@@ -13,16 +13,12 @@
 
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
+	const int num = n;
 	listint_t *init = malloc(sizeof(listint_t)), *final;
 
-	/* Edge cases */
+	/* Edge case */
 	if (init == NULL)
 		return (NULL);
-	if (n == NULL)
-	{
-		free(init);
-		return (NULL);
-	}
 
 	/* Out with the old */
 	init->n = n;
