@@ -21,7 +21,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		return (NULL);
 
 	/* Out with the old */
-	init->n = n;
+	init->n = num;
 	init->next = NULL;
 
 	/* In with the new */
