@@ -19,14 +19,16 @@ int pop_listint(listint_t **head)
 	if (*head == NULL)
 		return (0);
 
+	/* head_ptr stores address of head */
+	head_ptr = *head;
 	/* head's data is stored in ndata */
 	ndata = (*head)->n;
-	/* Second node's address is assigned to head_ptr */
-	head_ptr = (*head)->next;
+	/* head now points to the second node */
+	*head = (*head)->next;
 	/* Original head is set to NULL by free() */
-	free(*head);
-	/* New head is "officially" declared as 2nd node */
-	*head = head_ptr;
+	free(head_ptr);
+	/* head_ptr is refreshed */
+	head_ptr = NULL;
 
 	/* Node's data */
 	return (ndata);
