@@ -22,16 +22,16 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		return (NULL);
 
 	/* Loop through the linked list */
-	while (curr != NULL)
+	if (index)
 	{
-		if (i != index)
+		while (curr != NULL)
 		{
-			curr = curr->next;
+			if (i != index)
+				curr = curr->next;
+			i++;
 		}
-		i++;
+		return (curr);
 	}
-	return (curr);
-
-	/* If index is non-existent, assert() is called */
-	assert(0);
+	else
+		return (NULL);
 }
