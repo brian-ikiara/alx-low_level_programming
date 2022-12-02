@@ -18,15 +18,16 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	listint_t *curr = head;
 
 	/* Edge case */
-	if (head == NULL || curr == NULL)
+	if (head == NULL)
 		return (NULL);
 
 	/* Loop through the linked list */
-	while (curr != NULL) {
+	while (curr != NULL)
+	{
+		curr = curr->next;
 		/* Condition of return */
 		if (i == index)
-			return (curr->data);
-		curr = curr->next;
+			return (curr);
 		i++;
 	}
 
