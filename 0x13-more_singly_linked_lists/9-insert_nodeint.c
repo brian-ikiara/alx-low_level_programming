@@ -17,7 +17,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	/* Counter, new node & temporary location */
 	int num = n;
 	unsigned int i;
-	listint_t *new_node = malloc(sizeof(listint_t)), *temp = head;
+	listint_t *new_node = malloc(sizeof(listint_t)), *temp = *head;
 
 	/* Edge case I */
 	if (new_node == NULL)
