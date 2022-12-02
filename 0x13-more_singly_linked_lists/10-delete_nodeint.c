@@ -13,7 +13,7 @@
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	unsigned int i = 0;
-	listint_t *curr = head, *temp;
+	listint_t *curr = *head, *temp;
 
 	/* Edge case I */
 	if (curr == NULL)
