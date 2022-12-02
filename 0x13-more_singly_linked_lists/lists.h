@@ -1,6 +1,7 @@
 #ifndef LISTS_H
 #define LISTS_H
 
+#include <assert.h>
 #include <stdio.h>
 #include <stddef.h>
 #include <stdlib.h>
@@ -27,5 +28,6 @@ listint_t *add_nodeint_end(listint_t **, const int);
 void free_listint(listint_t *);
 void free_listint2(listint_t **);
 int pop_listint(listint_t **);
+listint *get_nodeint_at_index(listint_t *, unsigned int);
 
 #endif
