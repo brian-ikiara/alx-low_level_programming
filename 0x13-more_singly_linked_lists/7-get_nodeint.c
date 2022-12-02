@@ -14,24 +14,18 @@
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	unsigned int i = 0;
-	/* Temporarily assign the value of head */
-	listint_t *curr = head;
-
-	/* Edge case */
-	if (head == NULL)
-		return (NULL);
 
 	/* Loop through the linked list */
-	if (index)
+	while (head != NULL)
 	{
-		while (curr != NULL)
-		{
-			if (i != index)
-				curr = curr->next;
-			i++;
-		}
-		return (curr);
+		/* Returns pointer to node at nth index */
+		if (i == index)
+			return (head);
+		/* Increment mem_add by 8 bytes & i by 1 */
+		head = head->next;
+		i++;
 	}
-	else
-		return (NULL);
+
+	/* Returns if index doesn't exist */
+	return (NULL);
 }
