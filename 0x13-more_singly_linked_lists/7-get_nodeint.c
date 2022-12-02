@@ -24,12 +24,13 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	/* Loop through the linked list */
 	while (curr != NULL)
 	{
-		curr = curr->next;
-		/* Condition of return */
-		if (i == index)
-			return (curr);
+		if (i != index)
+		{
+			curr = curr->next;
+		}
 		i++;
 	}
+	return (curr);
 
 	/* If index is non-existent, assert() is called */
 	assert(0);
