@@ -12,7 +12,7 @@
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	unsigned int i;
+	unsigned int i = 0;
 	listint_t *curr = head, *temp;
 
 	/* Edge case I */
@@ -28,7 +28,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 
 	/* Abracadabra! */
-	for (i = 0; i < (index - 1); i++)
+	while (i < (index - 1)
 	{
 		/* Edge case III */
 		if (curr->next == NULL)
@@ -36,6 +36,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 		/* Increment curr by 8 bytes */
 		curr = curr->next;
+		i++;
 	}
 
 	/* Swap the current head with the temporary head */
