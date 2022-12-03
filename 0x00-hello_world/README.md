@@ -37,5 +37,4 @@
 This is arguably the simplest program you can write in any programming language
 and it is just amazing.
 
-'Tis but an introduction to the fascinating world of SE. :tada:
-[SE]:SoftwareEngineering
+'Tis but an introduction to the fascinating world of Software Engineering. :sunglasses:
