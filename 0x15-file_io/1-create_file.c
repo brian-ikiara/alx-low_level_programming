@@ -14,7 +14,7 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int fd_open, fd_write, length = 0;
+	int fd_open, fd_write, length;
 
 	/* Edge case I */
 	if (filename == NULL)
@@ -23,7 +23,7 @@ int create_file(const char *filename, char *text_content)
 	/* Edge case II */
 	if (text_content != NULL)
 	{
-		while (text_content[length])
+		for (length = 0; text_content[length];)
 			length++;
 	}
 
