@@ -14,7 +14,7 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int fd_open, fd_write, length;
+	int fd_open, fd_write, length = 0;
 
 	/* Edge case I */
 	if (filename == NULL)
@@ -23,12 +23,12 @@ int create_file(const char *filename, char *text_content)
 	/* Edge case II */
 	if (text_content != NULL)
 	{
-		for (length = 0; text_content[length];)
+		while (text_content[length])
 			length++;
 	}
 
 	/* Initialize the fildes */
-	fd_open = open(filename, O_CREAT | O_RDWR | O_TRUNC. 0600);
+	fd_open = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 	fd_write = write(fd_open, text_content, length);
 
 	/* Edge case III */
