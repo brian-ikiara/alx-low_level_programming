@@ -132,22 +132,22 @@ Used as follows(let r/w_bytes represent the bytes returned from read/write()):
 *From fd_open = open("filename", O_RDWR | O_CREAT, 0777);, we have*:
 
 ```c
-	buff = malloc(count);
+buff = malloc(count);
 
-	/**
-	 * For read()
-	 *
-	 * fd = fd_open
-	 * count = just count specified
-	 */
-	r_bytes = read(fd_open, buff, count);
-	/**
-	 * For write():
-	 *
-	 * fd = fildes for std.stream
-	 * count = r_bytes
-	 */
-	w_bytes = write(STDOUT_FILENO, buff, r_bytes);
+/**
+ * For read()
+ *
+ * fd = fd_open
+ * count = just count specified
+ */
+r_bytes = read(fd_open, buff, count);
+/**
+ * For write():
+ *
+ * fd = fildes for std.stream
+ * count = r_bytes
+ */
+w_bytes = write(STDOUT_FILENO, buff, r_bytes);
 ```
 
 ### File descriptor table
