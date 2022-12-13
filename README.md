@@ -56,6 +56,7 @@ Here's a little table, so that you don't get lost:
 | [0x12-singly_linked_lists](https://github.com/brian-ikiara/alx-low_level_programming/tree/main/0x12-singly_linked_lists) | 10 | - *Introduction to Linked Lists* |
 | [0x13-more_singly_linked_lists](https://github.com/brian-ikiara/alx-low_level_programming/tree/main/0x13-more_singly_linked_lists) | 14 | - *More on Singly Linked Lists* |
 | [0x14-bit_manipulation](https://github.com/brian-ikiara/alx-low_level_programming/tree/main/0x14-bit_manipulation) | 8 | - *Introduction to Bitwise Operations* |
+| [0x15-file_io](https://github.com/brian-ikiara/alx-low_level_programming/tree/main/0x15-file_io) | 7 | - *Introduction to File Management with C* |
 
 ---------------------------------------------------------------------
 
