@@ -1,6 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#define _GNU_SOURCE
+
 #include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -14,6 +16,6 @@ ssize_t read_textfile(const char *, size_t);
 int create_file(const char *, char *);
 int append_text_to_file(const char *, char *);
 char *_buffer(char *);
-void cls(ssize_t);
+void cls(int);
 
 #endif

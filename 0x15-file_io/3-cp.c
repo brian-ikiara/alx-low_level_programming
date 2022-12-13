@@ -22,7 +22,7 @@ char *_buffer(char *f)
 		 *
 		 * dprintf(int fildes, const char *format, ...);
 		 */
-		dprintf(STDERR_FILENO, "Error: Can't write to &s\n", f);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", f);
 		exit(99);
 	}
 
@@ -39,13 +39,13 @@ char *_buffer(char *f)
  * On error, 100.
  */
 
-void cls(ssize_t fd_open)
+void cls(int fd_open)
 {
-	ssize_t fd_close = close(fd_open);
+	int fd_close = close(fd_open);
 
 	if (fd_close == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %u\n", fd_open);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_open);
 		exit(100);
 	}
 }
