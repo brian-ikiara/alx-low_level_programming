@@ -10,6 +10,7 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <stddef.h>
+#include <elf.h>
 
 int _putchar(char);
 ssize_t read_textfile(const char *, size_t);
