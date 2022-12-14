@@ -71,39 +71,37 @@ int main(int ac, char *av[])
 
 	if (ac == 3)
 	{
-		init = open(av[1], O_RDONLY);
-		fd_read = read(init, b, 1024);
-		final = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-
-		do {
-			if (init == -1 || fd_read == -1)
-			{
-				dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
-				free(b);
-				exit(98);
-			}
-
-			fd_write = write(final, b, fd_read);
-			if (final == -1 || fd_write == -1)
-			{
-				dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-				free(b);
-				exit(99);
-			}
-
-			fd_read = read(init, b, 1024);
-			init =  open(av[2], O_WRONLY | O_APPEND);
-		} while (fd_read > 0);
-
-		free(b);
-		cls(init);
-		cls(final);
-	}
-	else
-	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
+
+	init = open(av[1], O_RDONLY);
+	fd_read = read(init, b, 1024);
+	final = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+
+	do {
+		if (init == -1 || fd_read == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+			free(b);
+			exit(98);
+		}
+
+		fd_write = write(final, b, fd_read);
+		if (final == -1 || fd_write == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+			free(b);
+			exit(99);
+		}
+
+		fd_read = read(init, b, 1024);
+		init =  open(av[2], O_WRONLY | O_APPEND);
+	} while (fd_read > 0);
+
+	free(b);
+	cls(init);
+	cls(final);
 
 	return (0);
 }
