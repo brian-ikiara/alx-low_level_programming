@@ -15,7 +15,7 @@ char *_buffer(char *f)
 	char *b = malloc(sizeof(char) * 1024);
 
 	/* Edge case I */
-	if (!b)
+	if (b == NULL)
 	{
 		/**
 		 * Intro to new function dprintf()
@@ -96,7 +96,7 @@ int main(int ac, char *av[])
 		}
 
 		fd_read = read(init, b, 1024);
-		init =  open(av[2], O_WRONLY | O_APPEND);
+		final =  open(av[2], O_WRONLY | O_APPEND);
 	} while (fd_read > 0);
 
 	free(b);
