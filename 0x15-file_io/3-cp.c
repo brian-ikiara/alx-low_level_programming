@@ -69,7 +69,7 @@ int main(int ac, char *av[])
 	int init, final, fd_read, fd_write;
 	char *b = _buffer(av[2]);
 
-	if (ac == 3)
+	if (ac != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
