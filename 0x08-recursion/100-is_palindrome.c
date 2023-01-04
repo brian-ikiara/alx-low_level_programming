@@ -14,8 +14,11 @@ int rec_strlen(char *s)
 {
 	int len = 0;
 
-	if (s[len])
-		len++, len += rec_strlen(s + len);
+	if (*(s + len))
+	{
+		len++;
+		len += rec_strlen(s + len);
+	}
 
 	return (len);
 }
