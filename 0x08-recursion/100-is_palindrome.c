@@ -39,7 +39,7 @@ int pal_check(char *s, int l, int i)
 	if (s[i] == s[l / 2])
 		return (1);
 	if (s[i] == s[l - i - 1])
-		return (pal_check(s, l, i++));
+		return (pal_check(s, l, i + 1));
 
 	return (0);
 }
