@@ -12,10 +12,10 @@ int main(void)
 {
 	long int i, n1 = 0, n2 = 1, fib;
 
-	for (i = 2; i < 51; ++i)
+	for (i = 2; i < 52; ++i)
 	{
 		fib = n1 + n2;
-		if (i <= 49)
+		if (i <= 50)
 			printf("%ld, ", fib);
 		else
 			printf("%ld", fib);
